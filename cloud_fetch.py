@@ -24,7 +24,7 @@ DATA_DIR = "data"
 CURSOR_FILE = os.path.join(DATA_DIR, "cursor.json")
 CSV_FILE = os.path.join(DATA_DIR, "prices.csv")
 CSV_HEADER = ["fetched_at", "from", "from_name", "to", "to_name",
-              "depart_date", "price", "airline", "flight_no"]
+              "depart_date", "price", "airline", "flight_no", "platform"]
 MAX_FAILS = 3
 
 
@@ -94,6 +94,7 @@ def main():
         append_rows([[
             best.fetched_at, t["from"], t["from_name"], t["to"], t["to_name"],
             t["date"], "%.0f" % best.price, best.airline, best.flight_no,
+            best.platform or "tuniu",
         ]])
         logger.info("[云端] %s 完成 最低价 ¥%.0f (%s %s)",
                     label, best.price, best.airline, best.flight_no)

@@ -29,11 +29,15 @@ def load_prices(db_path):
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
     best = {}
-    for f, t, d, p, al, fn in cur.execute("""
-        SELECT from_city, to_city, depart_date, MIN(price), airline, flight_no
-        FROM flight_prices GROUP BY from_city, to_city, depart_date
+    for f, t, d, p, al, fn, plat in cur.execute("""
+        SELECT p.from_city, p.to_city, p.depart_date, p.price, p.airline, p.flight_no, p.platform
+        FROM flight_prices p
+        WHERE p.price = (SELECT MIN(price) FROM flight_prices
+                         WHERE from_city=p.from_city AND to_city=p.to_city
+                           AND depart_date=p.depart_date)
+        GROUP BY p.from_city, p.to_city, p.depart_date
     """).fetchall():
-        best[(f, t, d)] = (p, al or "", fn or "")
+        best[(f, t, d)] = (p, al or "", fn or "", plat or "")
     # 各组合的历史最低 & 最新一次价格(用于判断涨跌)
     hist_min, latest = {}, {}
     for f, t, d, p in cur.execute("""
@@ -52,6 +56,9 @@ def load_prices(db_path):
         latest[(f, t, d)] = p
     conn.close()
     return best, hist_min, latest
+
+
+PLAT = {"tuniu": "途牛", "tuniu-cloud": "途牛", "tongcheng": "同程"}
 
 
 def render(cfg, db_path):
@@ -75,7 +82,7 @@ def render(cfg, db_path):
         for d in dates:
             key = (f, t, d)
             if key in best:
-                p, al, fno = best[key]
+                p, al, fno, plat = best[key]
                 row_prices.append((d, p, al, fno))
         cheap_dates = {d for d, p, _, _ in sorted(row_prices, key=lambda x: x[1])[:1]}
         for d in dates:
@@ -83,7 +90,7 @@ def render(cfg, db_path):
             if key not in best:
                 cells.append('<td class="cell miss">待抓</td>')
                 continue
-            p, al, fno = best[key]
+            p, al, fno, plat = best[key]
             cls = "cell"
             if th and p <= th:
                 cls += " great"
@@ -97,8 +104,9 @@ def render(cfg, db_path):
             elif lp is not None and hp is not None and lp == hp:
                 delta = '<span class="delta flat">当前即最低</span>'
             cells.append(
-                '<td class="%s"><b>¥%.0f</b><span class="meta">%s %s</span>%s</td>'
-                % (cls, p, html.escape(al), html.escape(fno), delta))
+                '<td class="%s"><b>¥%.0f</b><span class="meta">%s %s %s</span>%s</td>'
+                % (cls, p, html.escape(al), html.escape(fno),
+                   PLAT.get(plat, ''), delta))
         rows_html.append(
             '<tr><td class="route">%s → %s</td>%s</tr>'
             % (html.escape(fn), html.escape(tn), "".join(cells)))

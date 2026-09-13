@@ -1,15 +1,10 @@
 # 机票价格监控配置
-# 苏州周边机场(无锡/上海/盐城/扬州) → 兰州/西安/成都
+# 出发：苏州及周边机场（无锡/上海/嘉兴/常州/南通/盐城/扬州）
+# 到达：西安/成都/兰州/银川/敦煌/嘉峪关/金昌
 # 出行日期: 2026-09-30 / 10-01 / 10-02 (国庆)
 
 routes:
-  # ===== 无锡硕放 WUX =====
-  - from: WUX
-    from_name: 无锡
-    to: LHW
-    to_name: 兰州
-    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
-    alert_threshold: 600
+  # ===== 无锡 WUX =====
   - from: WUX
     from_name: 无锡
     to: SIA
@@ -22,14 +17,38 @@ routes:
     to_name: 成都
     dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
     alert_threshold: 600
-
-  # ===== 上海 SHA (虹桥+浦东) =====
-  - from: SHA
-    from_name: 上海
+  - from: WUX
+    from_name: 无锡
     to: LHW
     to_name: 兰州
     dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
     alert_threshold: 600
+  - from: WUX
+    from_name: 无锡
+    to: INC
+    to_name: 银川
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: WUX
+    from_name: 无锡
+    to: DNH
+    to_name: 敦煌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: WUX
+    from_name: 无锡
+    to: JGN
+    to_name: 嘉峪关
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: WUX
+    from_name: 无锡
+    to: JIC
+    to_name: 金昌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+
+  # ===== 上海 SHA =====
   - from: SHA
     from_name: 上海
     to: SIA
@@ -42,14 +61,170 @@ routes:
     to_name: 成都
     dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
     alert_threshold: 600
-
-  # ===== 盐城南洋 YNZ =====
-  - from: YNZ
-    from_name: 盐城
+  - from: SHA
+    from_name: 上海
     to: LHW
     to_name: 兰州
     dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
     alert_threshold: 600
+  - from: SHA
+    from_name: 上海
+    to: INC
+    to_name: 银川
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: SHA
+    from_name: 上海
+    to: DNH
+    to_name: 敦煌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: SHA
+    from_name: 上海
+    to: JGN
+    to_name: 嘉峪关
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: SHA
+    from_name: 上海
+    to: JIC
+    to_name: 金昌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+
+  # ===== 嘉兴 JNH =====
+  - from: JNH
+    from_name: 嘉兴
+    to: SIA
+    to_name: 西安
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 500
+  - from: JNH
+    from_name: 嘉兴
+    to: CTU
+    to_name: 成都
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: JNH
+    from_name: 嘉兴
+    to: LHW
+    to_name: 兰州
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: JNH
+    from_name: 嘉兴
+    to: INC
+    to_name: 银川
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: JNH
+    from_name: 嘉兴
+    to: DNH
+    to_name: 敦煌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: JNH
+    from_name: 嘉兴
+    to: JGN
+    to_name: 嘉峪关
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: JNH
+    from_name: 嘉兴
+    to: JIC
+    to_name: 金昌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+
+  # ===== 常州 CZX =====
+  - from: CZX
+    from_name: 常州
+    to: SIA
+    to_name: 西安
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 500
+  - from: CZX
+    from_name: 常州
+    to: CTU
+    to_name: 成都
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: CZX
+    from_name: 常州
+    to: LHW
+    to_name: 兰州
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: CZX
+    from_name: 常州
+    to: INC
+    to_name: 银川
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: CZX
+    from_name: 常州
+    to: DNH
+    to_name: 敦煌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: CZX
+    from_name: 常州
+    to: JGN
+    to_name: 嘉峪关
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: CZX
+    from_name: 常州
+    to: JIC
+    to_name: 金昌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+
+  # ===== 南通 NTG =====
+  - from: NTG
+    from_name: 南通
+    to: SIA
+    to_name: 西安
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 500
+  - from: NTG
+    from_name: 南通
+    to: CTU
+    to_name: 成都
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: NTG
+    from_name: 南通
+    to: LHW
+    to_name: 兰州
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: NTG
+    from_name: 南通
+    to: INC
+    to_name: 银川
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: NTG
+    from_name: 南通
+    to: DNH
+    to_name: 敦煌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: NTG
+    from_name: 南通
+    to: JGN
+    to_name: 嘉峪关
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: NTG
+    from_name: 南通
+    to: JIC
+    to_name: 金昌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+
+  # ===== 盐城 YNZ =====
   - from: YNZ
     from_name: 盐城
     to: SIA
@@ -62,14 +237,38 @@ routes:
     to_name: 成都
     dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
     alert_threshold: 600
-
-  # ===== 扬州泰州 YTY =====
-  - from: YTY
-    from_name: 扬州
+  - from: YNZ
+    from_name: 盐城
     to: LHW
     to_name: 兰州
     dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
     alert_threshold: 600
+  - from: YNZ
+    from_name: 盐城
+    to: INC
+    to_name: 银川
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: YNZ
+    from_name: 盐城
+    to: DNH
+    to_name: 敦煌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: YNZ
+    from_name: 盐城
+    to: JGN
+    to_name: 嘉峪关
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: YNZ
+    from_name: 盐城
+    to: JIC
+    to_name: 金昌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+
+  # ===== 扬州 YTY =====
   - from: YTY
     from_name: 扬州
     to: SIA
@@ -82,25 +281,55 @@ routes:
     to_name: 成都
     dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
     alert_threshold: 600
+  - from: YTY
+    from_name: 扬州
+    to: LHW
+    to_name: 兰州
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: YTY
+    from_name: 扬州
+    to: INC
+    to_name: 银川
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 600
+  - from: YTY
+    from_name: 扬州
+    to: DNH
+    to_name: 敦煌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: YTY
+    from_name: 扬州
+    to: JGN
+    to_name: 嘉峪关
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
+  - from: YTY
+    from_name: 扬州
+    to: JIC
+    to_name: 金昌
+    dates: ["2026-09-30", "2026-10-01", "2026-10-02"]
+    alert_threshold: 800
 
-# 途牛为纯接口实现，实测稳定；fliggy 被风控暂禁用，需要多平台比价可再加 ctrip/qunar/tongcheng
+# 途牛/同程可用；fliggy 接口已被阿里下线；ctrip/qunar 页面结构已变，抓取失效
 platforms: [tuniu]
 
 schedule:
-  interval_minutes: 200      # 一轮全量约2小时(36个请求x3.5分钟), 留冷却余量
-  jitter_minutes: 30         # 随机扰动
+  interval_minutes: 20
+  jitter_minutes: 0
   run_on_start: true
 
 crawler:
   headless: true
   timeout_seconds: 45
-  delay_min: 120           # 常规间隔; 真正限速由内置滑动窗口控制(2次成功/10分钟)
+  delay_min: 120
   delay_max: 180
-  max_attempts: 3          # 非风控失败的重试上限
+  max_attempts: 3
   backoff_seconds: 30
-  rate_limit: true         # 滑动窗口限速: 同进程10分钟内最多2次成功
-  block_cooldown_seconds: 900   # 触发179991后静默冷却15分钟(冷却期内请求会延长封锁)
-  block_max_attempts: 3         # 单日期封锁重试上限, 超过则放弃留待下一轮
+  rate_limit: true
+  block_cooldown_seconds: 900
+  block_max_attempts: 3
   user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
   mobile_user_agent: ""
   debug: true
@@ -115,6 +344,6 @@ notifier:
   push_drop_min: 30
   push_rise_min: 50
   serverchan:
-    enabled: false           # 如需微信推送，到 sct.ftqq.com 注册后填 SendKey
+    enabled: false
     send_key: ""
     channel: ""
