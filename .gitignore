@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+logs/
+debug/
+user_data/
+.venv/
+.monitor.pid
+.round.lock
+data/*.db
+!data/prices.csv
+!data/cursor.json
