@@ -47,14 +47,15 @@ def main():
                     best[key] = (p, row.get("airline", ""), row.get("flight_no", ""))
 
     total = len(uniq_routes) * len(dates)
-    lines = ["# 国庆机票价格监控", "",
-             "苏州周边（无锡 / 上海 / 盐城 / 扬州）→ 兰州 / 西安 / 成都 · 出行日期 9.30 / 10.1 / 10.2",
-             "",
-             "- 数据源：途牛（纯接口抓取）",
-             "- 云端执行：GitHub Actions，每 20 分钟抓一个航线×日期组合，约 %d 小时完成一轮全量刷新"
-             % (total * 20 // 60 + 1),
-             "- 最后更新：**%s**（UTC+8）" % datetime.now().strftime("%Y-%m-%d %H:%M"),
-             "- 覆盖进度：**%d / %d**" % (len(best), total), ""]
+    title = str(cfg.get("title", "机票价格监控"))
+    lines = ["# " + title, ""]
+    if cfg.get("subtitle"):
+        lines += [str(cfg["subtitle"]), ""]
+    lines += ["- 数据源：途牛（纯接口抓取）",
+              "- 云端执行：GitHub Actions，每 20 分钟抓一个航线×日期组合，约 %d 小时完成一轮全量刷新"
+              % (total * 20 // 60 + 1),
+              "- 最后更新：**%s**（UTC+8）" % datetime.now().strftime("%Y-%m-%d %H:%M"),
+              "- 覆盖进度：**%d / %d**" % (len(best), total), ""]
 
     lines.append("## 价格总览（各航线每日最低价）")
     lines.append("")
@@ -87,8 +88,15 @@ def main():
             lines.append("- **¥%.0f**　%s → %s　%s　%s %s" % (p, fn, tn, d, al, fno))
 
     lines += ["", "---", "",
-              "⭐ = 该航线最低出发日　🔥 = 已低于提醒阈值（西安 ¥500 / 兰州、成都 ¥600）", "",
+              "⭐ = 该航线最低出发日　🔥 = 已低于提醒阈值", "",
               "数据文件：`data/prices.csv`（每次抓取追加一行，含全部历史价格）"]
+
+    # 拼接使用指南（GUIDE.md 存在时附加在价格表之后，朋友 clone 后可随时查阅）
+    guide = os.path.join(BASE, "GUIDE.md")
+    if os.path.exists(guide):
+        with open(guide, "r", encoding="utf-8") as f:
+            lines += ["", "---", "", f.read().rstrip()]
+
     with open(README, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
     print("README 已更新，覆盖 %d/%d" % (len(best), total))
