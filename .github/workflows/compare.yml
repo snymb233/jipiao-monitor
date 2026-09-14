@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
@@ -46,4 +47,20 @@ jobs:
             git commit -m "同程比价更新 $(date '+%Y-%m-%d %H:%M')"
             git pull --rebase --autostash origin ${{ github.ref_name }}
             git push
+          fi
+
+      - name: 守护：确保监控链仍在运行
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # 若监控链已断（无运行中的 monitor 任务），重新拉起
+          running=$(gh run list --workflow monitor.yml --status in_progress --json databaseId 2>/dev/null | jq length || echo 0)
+          queued=$(gh run list --workflow monitor.yml --status queued --json databaseId 2>/dev/null | jq length || echo 0)
+          total=$((running + queued))
+          echo "monitor 运行中: ${running}，排队中: ${queued}"
+          if [ "$total" -eq 0 ]; then
+            echo "监控链已断，重新拉起"
+            gh workflow run monitor.yml --ref "${GITHUB_REF_NAME}"
+          else
+            echo "监控链正常，不重复拉起"
           fi

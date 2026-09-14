@@ -1,21 +1,25 @@
 name: 机票价格监控
 
+# 自触发链模式（公开仓库 Actions 免费无限额度）：
+# 每次运行抓 1 个组合 → 提交数据 → 睡到下一个 20 分钟整点 → dispatch 自己。
+# 不依赖 schedule 触发（实测 GitHub cron 对本仓库延迟数小时）。
+# 链断掉时由 compare.yml 的每日 cron 兜底重新拉起。
+
 on:
-  schedule:
-    # 每 20 分钟抓一个 (航线×日期) 组合；UTC 时间，+8 即北京时间
-    - cron: "*/20 * * * *"
-  workflow_dispatch:   # 允许手动触发测试
+  workflow_dispatch:
 
 concurrency:
   group: jipiao-monitor
-  cancel-in-progress: false
+  # 新触发会取消旧的等待中的运行，保证链始终只有一条
+  cancel-in-progress: true
 
 jobs:
   fetch:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    timeout-minutes: 5
+      actions: write
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
 
@@ -47,3 +51,15 @@ jobs:
             git pull --rebase --autostash origin ${{ github.ref_name }}
             git push
           fi
+
+      - name: 等待至下一个 20 分钟整点并触发下一轮
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          now=$(date +%s)
+          next=$(( (now / 1200 + 1) * 1200 ))
+          wait=$(( next - now + 5 ))
+          echo "本轮完成，等待 ${wait}s，至 $(date -d @${next} '+%H:%M:%S') UTC 触发下一轮"
+          sleep "$wait"
+          gh workflow run monitor.yml --ref "${GITHUB_REF_NAME}"
+          echo "已触发下一轮，链继续"
