@@ -27,3 +27,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-14 13:20:32,SHA,上海,SIA,西安,2026-09-30,1070,南航,CZ5791,tuniu
 2026-09-14 13:40:29,SHA,上海,SIA,西安,2026-10-01,1002,吉祥,HO1235,tuniu
 2026-09-14 14:00:33,SHA,上海,SIA,西安,2026-10-02,570,春秋,9C8945,tuniu
+2026-09-14 14:20:30,SHA,上海,CTU,成都,2026-09-30,1090,国航,CA8541,tuniu
