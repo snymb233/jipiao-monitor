@@ -11,3 +11,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-14 01:20:25,WUX,无锡,LHW,兰州,2026-10-01,1690,山航,SC9353,tuniu
 2026-09-14 01:40:28,WUX,无锡,LHW,兰州,2026-10-02,1200,昆明航,KY9323,tuniu
 2026-09-14 02:00:28,WUX,无锡,INC,银川,2026-09-30,2090,东航,MU2821-MU6261,tuniu
+2026-09-14 02:20:25,WUX,无锡,INC,银川,2026-10-01,1780,华夏,G51573A,tuniu
