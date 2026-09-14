@@ -43,3 +43,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-14 18:40:29,SHA,上海,JGN,嘉峪关,2026-10-01,1930,华夏,G54967F,tuniu
 2026-09-14 19:00:31,SHA,上海,JGN,嘉峪关,2026-10-02,1280,华夏,G58113N,tuniu
 2026-09-14 19:20:33,SHA,上海,JIC,金昌,2026-09-30,2230,深航,ZH5045,tuniu
+2026-09-14 20:00:25,SHA,上海,JIC,金昌,2026-10-01,1840,东航,MU2240-MU6203,tuniu
