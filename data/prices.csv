@@ -63,3 +63,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-16 01:40:39,CZX,常州,CTU,成都,2026-09-30,1100,成都航,EU1954,tuniu
 2026-09-16 02:00:32,CZX,常州,CTU,成都,2026-10-01,1050,瑞丽航,DR5016,tuniu
 2026-09-16 02:20:29,CZX,常州,CTU,成都,2026-10-02,892,东航,MU2935,tuniu
+2026-09-16 02:40:35,CZX,常州,LHW,兰州,2026-09-30,2340,国航,CA2628-CA2581,tuniu
