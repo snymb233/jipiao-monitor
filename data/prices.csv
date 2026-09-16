@@ -59,3 +59,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-15 07:06:33,SHA,上海,SIA,西安,2026-09-30,1130,,,tongcheng
 2026-09-16 00:40:27,CZX,常州,SIA,西安,2026-09-30,836,东航,MU2971,tuniu
 2026-09-16 01:00:28,CZX,常州,SIA,西安,2026-10-01,751,东航,MU2983,tuniu
+2026-09-16 01:20:30,CZX,常州,SIA,西安,2026-10-02,580,东航,MU2983,tuniu
