@@ -151,3 +151,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-18 08:20:30,WUX,无锡,CTU,成都,2026-10-01,1300,联合航空,KN6109,tuniu
 2026-09-18 08:40:28,WUX,无锡,CTU,成都,2026-10-02,694,东航,MU2825,tuniu
 2026-09-18 09:00:25,WUX,无锡,LHW,兰州,2026-09-30,1690,深航,ZH9555,tuniu
+2026-09-18 09:20:29,WUX,无锡,LHW,兰州,2026-10-01,1690,深航,ZH9555,tuniu
