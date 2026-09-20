@@ -205,3 +205,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-20 12:00:31,CZX,常州,INC,银川,2026-10-01,1540,华夏,G511D3E,tuniu
 2026-09-20 12:20:30,CZX,常州,INC,银川,2026-10-02,1150,川航,3U4755,tuniu
 2026-09-20 12:40:26,CZX,常州,DNH,敦煌,2026-09-30,2040,东航,MU2971-MU2215,tuniu
+2026-09-20 13:00:40,CZX,常州,DNH,敦煌,2026-10-01,2660,东航,MU2971-MU2127,tuniu
