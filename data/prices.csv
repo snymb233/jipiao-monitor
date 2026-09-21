@@ -247,3 +247,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-21 11:40:27,YNZ,盐城,LHW,兰州,2026-10-01,1420,华夏,G58004G,tuniu
 2026-09-21 12:00:27,YNZ,盐城,LHW,兰州,2026-10-02,1280,东航,MU2546-MU2587,tuniu
 2026-09-21 12:21:07,YNZ,盐城,INC,银川,2026-09-30,2340,国航,CA8614-CA8653,tuniu
+2026-09-21 12:40:30,YNZ,盐城,INC,银川,2026-10-01,2000,国航,CA1592-CA1217,tuniu
