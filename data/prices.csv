@@ -240,3 +240,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-21 08:40:33,YNZ,盐城,SIA,西安,2026-09-30,2430,国航,CA1592-CA1201,tuniu
 2026-09-21 09:20:29,YNZ,盐城,SIA,西安,2026-10-01,2520,国航,CA1592-CA1201,tuniu
 2026-09-21 10:00:34,YNZ,盐城,SIA,西安,2026-10-02,1970,国航,CA1592-CA1201,tuniu
+2026-09-21 10:20:29,YNZ,盐城,CTU,成都,2026-09-30,1420,成都航,EU2288,tuniu
