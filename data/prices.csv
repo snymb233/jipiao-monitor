@@ -285,3 +285,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-22 16:40:33,WUX,无锡,CTU,成都,2026-09-30,903,东航,MU2905,tuniu
 2026-09-22 17:00:30,WUX,无锡,CTU,成都,2026-10-01,1112,东航,MU2825,tuniu
 2026-09-22 17:20:32,WUX,无锡,CTU,成都,2026-10-02,903,东航,MU2905,tuniu
+2026-09-22 17:40:29,WUX,无锡,LHW,兰州,2026-09-30,1690,山航,SC9353,tuniu
