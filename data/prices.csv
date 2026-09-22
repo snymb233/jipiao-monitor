@@ -259,3 +259,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-21 23:40:25,YTY,扬州,CTU,成都,2026-10-01,770,国航,CA4222,tuniu
 2026-09-22 00:00:30,YTY,扬州,CTU,成都,2026-10-02,770,国航,CA4222,tuniu
 2026-09-22 00:20:31,YTY,扬州,LHW,兰州,2026-09-30,800,春秋,9C8513,tuniu
+2026-09-22 00:40:29,YTY,扬州,LHW,兰州,2026-10-01,1400,春秋,9C7371,tuniu
