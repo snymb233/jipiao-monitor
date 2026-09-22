@@ -277,3 +277,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-22 07:12:48,CZX,常州,SIA,西安,2026-10-01,880,,,tongcheng
 2026-09-22 07:13:05,SHA,上海,LHW,兰州,2026-10-02,740,,,tongcheng
 2026-09-22 07:13:21,YTY,扬州,SIA,西安,2026-09-30,690,,,tongcheng
+2026-09-22 07:13:51,YTY,扬州,DNH,敦煌,2026-10-01,2090,华夏,G52889I,tuniu
