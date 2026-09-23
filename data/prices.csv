@@ -312,3 +312,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-23 07:11:06,SHA,上海,CTU,成都,2026-10-02,720,,,tongcheng
 2026-09-23 07:11:24,SHA,上海,LHW,兰州,2026-10-02,600,,,tongcheng
 2026-09-23 07:11:41,CZX,常州,SIA,西安,2026-10-01,880,,,tongcheng
+2026-09-23 07:20:31,SHA,上海,LHW,兰州,2026-09-30,1020,国航,CA8525,tuniu
