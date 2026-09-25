@@ -373,3 +373,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-25 09:00:33,NTG,南通,DNH,敦煌,2026-10-01,2510,国航,CA1514-CA9843,tuniu
 2026-09-25 09:40:28,NTG,南通,DNH,敦煌,2026-10-02,1690,国航,CA1514-CA9843,tuniu
 2026-09-25 18:20:26,YNZ,盐城,SIA,西安,2026-09-30,2330,国航,CA1592-CA1201,tuniu
+2026-09-25 19:00:28,YNZ,盐城,SIA,西安,2026-10-01,2520,国航,CA1592-CA1201,tuniu
