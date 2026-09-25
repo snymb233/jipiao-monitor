@@ -364,3 +364,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-25 05:20:26,NTG,南通,CTU,成都,2026-10-01,920,深航,ZH4104,tuniu
 2026-09-25 05:40:28,NTG,南通,CTU,成都,2026-10-02,830,深航,ZH8675,tuniu
 2026-09-25 06:00:31,NTG,南通,LHW,兰州,2026-09-30,600,新海航｜乌鲁木齐航空,UQ2526,tuniu
+2026-09-25 06:40:28,NTG,南通,LHW,兰州,2026-10-01,2170,国航,CA2602-CA2581,tuniu
