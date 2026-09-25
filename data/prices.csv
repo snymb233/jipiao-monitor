@@ -361,3 +361,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-25 04:20:27,NTG,南通,SIA,西安,2026-10-01,920,山航,SC6142,tuniu
 2026-09-25 04:40:25,NTG,南通,SIA,西安,2026-10-02,520,西藏航,TV9964,tuniu
 2026-09-25 05:00:32,NTG,南通,CTU,成都,2026-09-30,1130,东海航,DZ6291,tuniu
+2026-09-25 05:20:26,NTG,南通,CTU,成都,2026-10-01,920,深航,ZH4104,tuniu
