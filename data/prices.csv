@@ -477,3 +477,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-29 00:00:27,CZX,常州,SIA,西安,2026-10-01,766,东航,MU2983,tuniu
 2026-09-29 00:20:24,CZX,常州,SIA,西安,2026-10-02,513,东航,MU2983,tuniu
 2026-09-29 00:40:25,CZX,常州,CTU,成都,2026-09-30,874,东航,MU2935,tuniu
+2026-09-29 01:00:26,CZX,常州,CTU,成都,2026-10-01,800,国航,CA2634,tuniu
