@@ -529,3 +529,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-09-30 07:51:22,YTY,扬州,CTU,成都,2026-10-02,590,,,tongcheng
 2026-09-30 08:00:30,YNZ,盐城,CTU,成都,2026-10-01,690,长龙航,GJ3358,tuniu
 2026-09-30 08:20:29,YNZ,盐城,CTU,成都,2026-10-02,600,川航,3U6956,tuniu
+2026-09-30 10:00:29,YNZ,盐城,LHW,兰州,2026-10-01,1600,国航,CA8614-CA8375,tuniu
