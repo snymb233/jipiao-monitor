@@ -538,3 +538,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-10-01 00:20:26,YTY,扬州,SIA,西安,2026-10-01,580,华夏,G597R2L,tuniu
 2026-10-01 00:40:26,YTY,扬州,SIA,西安,2026-10-02,550,深航,ZH9254,tuniu
 2026-10-01 02:20:37,YTY,扬州,CTU,成都,2026-10-01,770,深航,ZH4374,tuniu
+2026-10-01 02:40:25,YTY,扬州,CTU,成都,2026-10-02,790,昆明航,KY3195,tuniu
