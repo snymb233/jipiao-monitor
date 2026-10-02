@@ -555,3 +555,4 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-10-01 10:20:27,YTY,扬州,DNH,敦煌,2026-10-01,2140,川航,3U4160-3U4267,tuniu
 2026-10-01 10:40:30,YTY,扬州,DNH,敦煌,2026-10-02,2490,深航,ZH8420-MU3219,tuniu
 2026-10-01 21:40:29,WUX,无锡,SIA,西安,2026-10-02,912,东航,MU2709,tuniu
+2026-10-02 00:40:27,WUX,无锡,CTU,成都,2026-10-02,708,东航,MU2825,tuniu
