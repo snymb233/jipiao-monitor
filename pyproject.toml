@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jipiao-monitor"
+version = "1.0.0"
+description = "机票价格监控：多平台（途牛/携程/飞猪/同程/去哪儿）低价抓取、去抖提醒、Markdown/HTML 看板"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "playwright>=1.44.0",
+    "PyYAML>=6.0",
+    "APScheduler>=3.10.4",
+    "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools]
+packages = ["core", "crawlers"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+# core / crawlers 在仓库根目录用相对导入（from core.xxx import ...），保证包根可导入
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["F", "E9", "I"]
+ignore = ["E501"]
