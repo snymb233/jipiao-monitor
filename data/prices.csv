@@ -784,3 +784,7 @@ fetched_at,from,from_name,to,to_name,depart_date,price,airline,flight_no
 2026-11-11 08:45:41,WUX,无锡,CTU,成都,2026-10-02,1730,,,tongcheng
 2026-11-11 08:46:32,YTY,扬州,CTU,成都,2026-10-02,1700,,,tongcheng
 2026-11-11 08:46:47,CZX,常州,SIA,西安,2026-10-02,1210,,,tongcheng
+2026-11-12 09:04:32,SHA,上海,SIA,西安,2026-10-02,1125,,,tongcheng
+2026-11-12 09:05:54,CZX,常州,CTU,成都,2026-10-02,1300,,,tongcheng
+2026-11-12 09:06:27,WUX,无锡,CTU,成都,2026-10-02,1500,,,tongcheng
+2026-11-12 09:07:36,CZX,常州,SIA,西安,2026-10-02,1210,,,tongcheng
