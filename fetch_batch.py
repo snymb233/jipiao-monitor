@@ -39,6 +39,8 @@ def load_tasks(cfg: dict):
 
 
 def read_cursor(total: int) -> dict:
+    if total <= 0:
+        return {"index": 0, "fails": 0}
     if os.path.exists(CURSOR_FILE):
         try:
             with open(CURSOR_FILE, "r", encoding="utf-8") as f:
