@@ -41,6 +41,8 @@ def load_tasks(cfg):
 
 
 def read_cursor(total):
+    if total <= 0:
+        return {"index": 0, "fails": 0}
     if os.path.exists(CURSOR_FILE):
         try:
             with open(CURSOR_FILE, "r", encoding="utf-8") as f:
@@ -72,6 +74,10 @@ def main():
         cfg = yaml.safe_load(f)
 
     tasks = load_tasks(cfg)
+    if not tasks:
+        print("config.yaml 中没有配置任何航线")
+        return
+
     logger = setup_logger("logs/monitor.log", "jipiao")
 
     state = read_cursor(len(tasks))
